@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -127,6 +128,10 @@ namespace TechJobs.Models
             }
 
             string[] headers = rows[0];
+            /*for (int i = 0; i<headers.Length; i++)
+            {
+                headers[i] = headers[i].Substring(0,1).ToUpper()+headers[i].Substring(1,headers[i].Length-1);
+            }*/
             rows.Remove(headers);
 
             // Parse each row array into a more friendly Dictionary
